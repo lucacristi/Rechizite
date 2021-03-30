@@ -14,11 +14,6 @@ public class Caiet extends Rechizita {
         this(anotherCaiet.nume, anotherCaiet.tipCaiet, anotherCaiet.numarFile);
     }
 
-    @Override
-    public String getNume() {
-        return super.nume + " - caiet";
-    }
-
     public String getTipCaiet() {
         return tipCaiet;
     }
@@ -33,6 +28,11 @@ public class Caiet extends Rechizita {
 
     public void setNumarFile(int numarFile) {
         this.numarFile = numarFile;
+    }
+
+    @Override
+    public String getNume() {
+        return super.nume + " - caiet";
     }
 
     @Override

@@ -1,14 +1,15 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class Manual extends Rechizita{
-    private int nrAutori = 0;
-    private String[] autori;
+    private List<String> autori;
     private String editura;
 
-    public Manual(String nume, String[] autori, String editura) {
+    public Manual(String nume, List<String> autori, String editura) {
         super.nume = nume;
-        copyAuthors(autori);
+        this.autori = List.copyOf(autori);
         this.editura = editura;
     }
 
@@ -16,17 +17,12 @@ public class Manual extends Rechizita{
         this(anotherManual.nume, anotherManual.autori, anotherManual.editura);
     }
 
-    @Override
-    public String getNume() {
-        return super.nume + " - manual";
+    public List<String> getAutori() {
+       return List.copyOf(autori);
     }
 
-    public String[] getAutori() {
-        return autori;
-    }
-
-    public void setAutori(String[] autori) {
-        this.autori = autori;
+    public void setAutori(List<String> autori) {
+        this.autori = List.copyOf(autori);
     }
 
     public String getEditura() {
@@ -38,25 +34,24 @@ public class Manual extends Rechizita{
     }
 
     @Override
+    public String getNume() {
+        return super.nume + " - manual";
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Manual manual = (Manual) o;
-        return Arrays.equals(autori, manual.autori) &&
+        return Objects.equals(autori, manual.autori) &&
                 Objects.equals(editura, manual.editura);
     }
 
     @Override
     public String toString() {
         return "Manual{" +
-                "autori=" + Arrays.toString(autori) +
+                "autori=" + autori +
                 ", editura='" + editura + '\'' +
                 '}';
-    }
-
-    private void copyAuthors(String[] autori){
-        nrAutori = autori.length;
-        this.autori = new String[nrAutori];
-
     }
 }
