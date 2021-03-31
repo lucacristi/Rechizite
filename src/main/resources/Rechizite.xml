@@ -1,0 +1,52 @@
+<?xml version = "1.0"?>
+<rechizite>
+    <rechizita type = "manual">
+        <nume>abecedar</nume>
+        <autori>
+            <value>Ion</value>
+            <value>Ana</value>
+            <value>Vasile</value>
+        </autori>
+        <editura>Corint</editura>
+    </rechizita>
+
+    <rechizita type = "manual">
+        <nume>culegere</nume>
+        <autori>
+            <value>Crina</value>
+            <value>Mihaela</value>
+            <value>Sorin</value>
+        </autori>
+        <editura>ArtPress</editura>
+    </rechizita>
+
+
+    <rechizita type = "caiet">
+        <nume>patratele</nume>
+        <tip>A5</tip>
+        <numarFile>48</numarFile>
+    </rechizita>
+
+    <rechizita type = "caiet">
+        <nume>linii</nume>
+        <tip>dictando</tip>
+        <numarFile>48</numarFile>
+    </rechizita>
+
+    <rechizita type = "caiet">
+        <nume>desen</nume>
+        <tip>blank</tip>
+        <numarFile>80</numarFile>
+    </rechizita>
+
+    <rechizita type = "manual">
+        <nume>insectar</nume>
+        <autori>
+            <value>Xenia</value>
+            <value>Abraham</value>
+            <value>Cupidon</value>
+        </autori>
+        <editura>ArtPress</editura>
+    </rechizita>
+
+</rechizite>
